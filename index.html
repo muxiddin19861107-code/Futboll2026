@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FOOTBALL STARS | Futbolchilar</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header class="navbar">
+    <a href="#home" class="logo">⚽ FOOTBALL<span>STARS</span></a>
+    <nav>
+        <a href="#home">Bosh sahifa</a>
+        <a href="#players">Futbolchilar</a>
+        <a href="#ranking">Reyting</a>
+    </nav>
+    <div class="live">● FOOTBALL WORLD</div>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <span class="tag">THE WORLD OF FOOTBALL</span>
+        <h1>ENG ZO'R<br><span>FUTBOLCHILAR</span></h1>
+        <p>Dunyoning mashhur futbolchilari, ularning gollari, yoshi va statistikasi.</p>
+        <a href="#players" class="hero-btn">FUTBOLCHILARNI KO'RISH →</a>
+    </div>
+    <div class="hero-ball">⚽</div>
+</section>
+
+<section class="stats">
+    <div class="stat-box">
+        <h2>20</h2>
+        <p>FUTBOLCHI</p>
+    </div>
+    <div class="stat-box">
+        <h2>TOP 20</h2>
+        <p>REYTING</p>
+    </div>
+    <div class="stat-box">
+        <h2>GLOBAL</h2>
+        <p>FUTBOL OLAMI</p>
+    </div>
+</section>
+
+<main class="container" id="players">
+    <div class="section-heading">
+        <div>
+            <span class="tag">PLAYER DATABASE</span>
+            <h2>FUTBOLCHILAR</h2>
+        </div>
+        <span class="player-count" id="playerCount">20 futbolchi</span>
+    </div>
+
+    <div class="filters">
+        <div class="search-box">
+            <span>⌕</span>
+            <input type="text" id="searchInput" placeholder="Messi, Ronaldo, Mbappe...">
+        </div>
+
+        <select id="sortSelect">
+            <option value="goals">Gollar bo'yicha</option>
+            <option value="age">Yoshi bo'yicha</option>
+            <option value="name">Ismi bo'yicha</option>
+        </select>
+    </div>
+
+    <div class="players-grid" id="playersGrid"></div>
+
+    <div class="empty" id="emptyMessage" hidden>
+        <h2>Futbolchi topilmadi!</h2>
+        <p>Boshqa ism bilan qidirib ko'ring.</p>
+    </div>
+</main>
+
+<section class="ranking-section" id="ranking">
+    <div class="container">
+        <span class="tag">LEADERBOARD</span>
+        <h2>TOP 20 REYTING</h2>
+        <p class="ranking-desc">Gollar soni bo'yicha futbolchilar reytingi.</p>
+
+        <div class="table-wrap">
+            <table>
+                <thead>
+                    <tr>
+                        <th>O'RIN</th>
+                        <th>FUTBOLCHI</th>
+                        <th>YOSH</th>
+                        <th>KLUB</th>
+                        <th>GOLLAR</th>
+                    </tr>
+                </thead>
+                <tbody id="rankingBody"></tbody>
+            </table>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <h2>⚽ FOOTBALL<span>STARS</span></h2>
+    <p>Futbol olamining eng zo'r yulduzlari bir joyda.</p>
+    <p class="copyright">© 2026 FOOTBALL STARS</p>
+</footer>
+
+<div class="modal" id="playerModal">
+    <div class="modal-content">
+        <button class="close-btn" id="closeModal">✕</button>
+        <img id="modalImage" src="" alt="Futbolchi">
+        <span class="tag">PLAYER PROFILE</span>
+        <h2 id="modalName"></h2>
+
+        <div class="profile-info">
+            <div><span>Yoshi</span><strong id="modalAge"></strong></div>
+            <div><span>Klubi</span><strong id="modalClub"></strong></div>
+            <div><span>Davlati</span><strong id="modalCountry"></strong></div>
+            <div><span>Gollari</span><strong id="modalGoals"></strong></div>
+            <div><span>Reyting</span><strong id="modalRank"></strong></div>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
